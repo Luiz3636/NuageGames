@@ -1,0 +1,717 @@
+
+/* =====================================
+   NUAGEGAMES - MAIN STYLESHEET
+   Version: 0.1.0
+===================================== */
+
+
+/* 1. RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #080808;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* 2. VARIABLES */
+
+:root {
+    --background: #080808;
+    --surface: #111111;
+    --surface-hover: #1a1a1a;
+
+    --white: #ffffff;
+    --gray: #999999;
+    --dark-gray: #555555;
+    --border: #262626;
+
+    --radius: 10px;
+    --transition: 0.25s ease;
+}
+
+
+/* 3. GENERAL */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+section {
+    padding: 90px 8%;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+
+/* 4. HEADER */
+
+.header {
+    width: 100%;
+    min-height: 80px;
+    padding: 0 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--background);
+    border-bottom: 1px solid var(--border);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.logo span {
+    color: var(--gray);
+}
+
+.navigation {
+    display: flex;
+    gap: 35px;
+}
+
+.navigation a {
+    color: var(--gray);
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.navigation a:hover {
+    color: var(--white);
+}
+
+.search-button {
+    background: transparent;
+    color: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    padding: 10px 20px;
+    transition: var(--transition);
+}
+
+.search-button:hover {
+    background: var(--white);
+    color: var(--background);
+}
+
+
+/* 5. HERO */
+
+.hero {
+    min-height: 560px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            #202020 0%,
+            #080808 65%
+        );
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-label,
+.section-label {
+    color: var(--gray);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 76px);
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+}
+
+.hero-content > p:not(.hero-label) {
+    color: var(--gray);
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+
+/* 6. BUTTONS */
+
+.main-button {
+    display: inline-block;
+
+    background: var(--white);
+    color: #080808;
+
+    padding: 14px 28px;
+    border-radius: var(--radius);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: var(--transition);
+}
+
+.main-button:hover {
+    background: #cccccc;
+    transform: translateY(-3px);
+}
+
+
+/* 7. SEARCH */
+
+.search-section {
+    text-align: center;
+    background: var(--surface);
+}
+
+.search-section h2,
+.platforms h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.search-container {
+    max-width: 650px;
+    margin: auto;
+
+    display: flex;
+    gap: 10px;
+}
+
+.search-container input {
+    flex: 1;
+    min-width: 0;
+
+    background: #080808;
+    color: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    padding: 15px 20px;
+    outline: none;
+}
+
+.search-container input:focus {
+    border-color: #777777;
+}
+
+.search-container button {
+    background: var(--white);
+    color: #080808;
+
+    border: none;
+    border-radius: var(--radius);
+
+    padding: 0 25px;
+    font-weight: 700;
+
+    transition: var(--transition);
+}
+
+.search-container button:hover {
+    background: #cccccc;
+}
+
+
+/* 8. PLATFORMS */
+
+.platforms {
+    text-align: center;
+}
+
+.platform-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.platform-list button {
+    background: var(--surface);
+    color: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    padding: 16px 35px;
+
+    transition: var(--transition);
+}
+
+.platform-list button:hover {
+    background: var(--white);
+    color: #080808;
+}
+
+
+/* 9. GAMES */
+
+.games-section {
+    background: var(--surface);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 34px;
+}
+
+.section-header > a {
+    color: var(--gray);
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.section-header > a:hover {
+    color: var(--white);
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.empty-games {
+    grid-column: 1 / -1;
+
+    padding: 65px 20px;
+
+    text-align: center;
+
+    border: 1px dashed var(--dark-gray);
+    border-radius: var(--radius);
+}
+
+.empty-games h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.empty-games p {
+    color: var(--gray);
+}
+
+
+/* 10. PRICE COMPARISON */
+
+.comparison-section {
+    text-align: center;
+}
+
+.comparison-section h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.comparison-section > p:not(.section-label) {
+    color: var(--gray);
+    margin-bottom: 30px;
+}
+
+
+/* 11. ABOUT */
+
+.about-section {
+    background: var(--surface);
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.about-section p {
+    max-width: 700px;
+    margin: auto;
+    color: var(--gray);
+}
+
+
+/* 12. FOOTER */
+
+.footer {
+    padding: 45px 8%;
+
+    text-align: center;
+
+    border-top: 1px solid var(--border);
+}
+
+.footer .logo {
+    margin-bottom: 10px;
+}
+
+.footer p {
+    color: var(--gray);
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+
+/* 13. RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 20px 5%;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .navigation {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    section {
+        padding: 70px 5%;
+    }
+
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+        justify-content: center;
+    }
+
+    .navigation {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .header-actions {
+        display: none;
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+
+    .hero h1 {
+        letter-spacing: -1.5px;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .search-container button {
+        padding: 14px;
+    }
+
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .comparison-section h2 {
+        font-size: 32px;
+    }
+
+}
+
+/* =====================================
+   14. GAME CARDS
+===================================== */
+
+.game-card {
+    background: #080808;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    min-height: 230px;
+
+    transition: 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    border-color: #777777;
+    background: #141414;
+}
+
+.game-card h3 {
+    font-size: 23px;
+    letter-spacing: -0.5px;
+}
+
+.game-platform {
+    width: fit-content;
+
+    background: #222222;
+    color: #cccccc;
+
+    padding: 5px 12px;
+    border-radius: 5px;
+
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.game-genre {
+    color: #aaaaaa;
+    font-size: 13px;
+}
+
+.game-description {
+    color: #888888;
+    font-size: 14px;
+}
+
+.game-price {
+    margin-top: auto;
+    padding-top: 15px;
+
+    border-top: 1px solid var(--border);
+
+    color: #cccccc;
+    font-size: 12px;
+}
+
+
+/* =====================================
+   15. ACTIVE PLATFORM FILTER
+===================================== */
+
+.platform-list button.active {
+    background: #ffffff;
+    color: #080808;
+    border-color: #ffffff;
+}
+
+
+/* =====================================
+   16. GAME CARD RESPONSIVENESS
+===================================== */
+
+@media (max-width: 600px) {
+
+    .game-card {
+        min-height: 200px;
+    }
+
+}
+
+/* =====================================
+   NuageGames - Correção dos cartões
+===================================== */
+
+.games-grid,
+#games-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+}
+
+.game-card {
+    width: 100%;
+    min-width: 0;
+    padding: 16px;
+    overflow: hidden;
+}
+
+.game-cover {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    position: relative;
+    background: #181818;
+    border-radius: 8px;
+}
+
+.game-cover img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.game-cover.no-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+}
+
+.game-card h3 {
+    font-size: 20px;
+    margin: 12px 0 8px;
+}
+
+.game-card p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .games-grid,
+    #games-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .games-grid,
+    #games-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =====================================
+   NuageGames - Price Comparison
+===================================== */
+
+.price-subtitle {
+    color: #999;
+    margin-bottom: 25px;
+}
+
+.price-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.price-header {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 0.7fr 0.7fr;
+    gap: 15px;
+    padding: 15px;
+    background: #1a1a1a;
+    color: #999;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.price-empty {
+    padding: 30px 15px;
+    text-align: center;
+    color: #777;
+}
+
+.price-disclaimer {
+    color: #666;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+    .price-header {
+        min-width: 500px;
+    }
+}
+
+/* Seletor de plataformas do comparador */
+
+#price-platform {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 12px 0 25px;
+    padding: 12px;
+    background: #181818;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.price-section label {
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* Ofertas de preços */
+
+.price-offer-row {
+    align-items: center;
+    margin-top: 8px;
+}
+
+.cheapest-offer {
+    border: 1px solid #777;
+    background: #1c1c1c;
+}
+
+.cheapest-badge {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 4px 7px;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #080808;
+    font-size: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+}

@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jogo | NuageGames</title>
+
+    <link rel="stylesheet" href="src/styles/main.css">
+
+    <style>
+        .game-details {
+            max-width: 1100px;
+            margin: 70px auto;
+            padding: 20px;
+        }
+
+        .back-link {
+            color: #999;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: white;
+        }
+
+        .game-information {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 40px;
+            margin-top: 35px;
+        }
+
+        .game-information img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .game-information h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .game-information p {
+            color: #aaa;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .game-platforms {
+            color: white !important;
+        }
+
+        .price-section {
+            margin-top: 60px;
+            padding: 25px;
+            background: #111;
+            border: 1px solid #262626;
+            border-radius: 10px;
+        }
+
+        .price-section h2 {
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 700px) {
+            .game-information {
+                grid-template-columns: 1fr;
+            }
+
+            .game-information img {
+                max-width: 300px;
+            }
+
+            .game-information h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            nuage<span>games</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="index.html#games">Jogos</a>
+            <a href="index.html#platforms">Plataformas</a>
+            <a href="index.html#about">Sobre</a>
+        </nav>
+    </header>
+
+    <main class="game-details">
+
+        <a href="index.html" class="back-link">
+            ← Voltar aos jogos
+        </a>
+
+        <section class="game-information">
+
+            <img id="game-image" src="" alt="Capa do jogo">
+
+            <div>
+                <h1 id="game-title">A carregar...</h1>
+
+                <p id="game-genre"></p>
+
+                <p id="game-description"></p>
+
+                <p class="game-platforms" id="game-platforms"></p>
+            </div>
+
+        </section>
+
+
+<section class="price-section">
+    <h2>Comparação de preços</h2>
+
+    <p class="price-subtitle">
+        Compara as ofertas disponíveis nas diferentes lojas.
+    </p>
+<label for="price-platform">Escolhe a plataforma:</label>
+
+<select id="price-platform">
+    <option value="">A carregar plataformas...</option>
+</select>
+    <div class="price-table">
+
+        <div class="price-header">
+            <span>Loja</span>
+            <span>Plataforma</span>
+            <span>Preço</span>
+            <span>Oferta</span>
+        </div>
+
+        <div id="price-results">
+            <p class="price-empty">
+                Ainda não existem preços disponíveis.
+            </p>
+        </div>
+
+    </div>
+
+    <p class="price-disclaimer">
+        Os preços serão apresentados quando as integrações
+        com as lojas estiverem disponíveis.
+    </p>
+</section>
+
+
+    </main>
+
+    <script src="src/data/prices.js"></script>
+<script src="src/scripts/game.js"></script>
+
+</body>
+</html>
